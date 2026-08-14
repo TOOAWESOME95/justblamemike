@@ -1,0 +1,152 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand-orange: #f48c25;
+  --brand-dark: #1a1008;
+  --brand-cream: #f8f7f5;
+  --brand-warm: #2a1f14;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: var(--brand-dark);
+  color: #e8ddd0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: rgba(244, 140, 37, 0.3);
+  color: white;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--brand-dark);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(244, 140, 37, 0.3);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(244, 140, 37, 0.5);
+}
+
+/* Form focus */
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(244, 140, 37, 0.4);
+  border-color: var(--brand-orange) !important;
+}
+
+/* ═══════════ HEAVEN MODE ═══════════ */
+html.heaven {
+  --brand-dark: #f0f4fa;
+  --brand-cream: #1a1008;
+  --brand-warm: #e4e9f2;
+}
+
+html.heaven body {
+  background-color: #f0f4fa;
+  color: #2a3a5a;
+}
+
+/* Cloud texture on heaven body */
+html.heaven body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 600px 200px at 20% 30%, rgba(255,255,255,0.7) 0%, transparent 70%),
+    radial-gradient(ellipse 500px 180px at 70% 50%, rgba(255,255,255,0.5) 0%, transparent 70%),
+    radial-gradient(ellipse 400px 150px at 40% 80%, rgba(255,255,255,0.4) 0%, transparent 70%);
+  opacity: 0.6;
+}
+
+/* Override dark backgrounds */
+html.heaven .bg-brand-dark,
+html.heaven [style*="background"][style*="26,16,8"],
+html.heaven [style*="background"][style*="1a1008"] {
+  background-color: #f0f4fa !important;
+}
+html.heaven .bg-brand-warm {
+  background-color: #e4e9f2 !important;
+}
+html.heaven .bg-brand-orange {
+  background-color: #f48c25 !important;
+}
+
+/* Text overrides */
+html.heaven .text-white {
+  color: #1a2a4a !important;
+}
+html.heaven .text-brand-orange {
+  color: #d47520 !important;
+}
+
+/* Card & border overrides */
+html.heaven [style*="border"][style*="244,140,37"] {
+  border-color: rgba(212, 117, 32, 0.15) !important;
+}
+
+/* Header & footer in heaven */
+html.heaven header {
+  background: rgba(240,244,250,0.96) !important;
+  border-bottom-color: rgba(212,117,32,0.12) !important;
+}
+html.heaven header span,
+html.heaven header a {
+  color: #2a3a5a;
+}
+html.heaven header .text-brand-orange,
+html.heaven header [style*="color: rgb(244, 140, 37)"],
+html.heaven header [style*="color:#f48c25"] {
+  color: #d47520 !important;
+}
+
+html.heaven footer {
+  background: #e8ecf4 !important;
+}
+
+/* Scrollbar in heaven */
+html.heaven ::-webkit-scrollbar-track {
+  background: #f0f4fa;
+}
+html.heaven ::-webkit-scrollbar-thumb {
+  background: rgba(212, 117, 32, 0.25);
+}
+
+/* Selection in heaven */
+html.heaven ::selection {
+  background-color: rgba(212, 117, 32, 0.2);
+  color: #1a2a4a;
+}
+
+/* Form inputs in heaven */
+html.heaven input,
+html.heaven textarea,
+html.heaven select {
+  background-color: #fff !important;
+  border-color: rgba(212, 117, 32, 0.2) !important;
+  color: #2a3a5a !important;
+}
+
+/* Transition everything */
+html, html * {
+  transition: background-color 0.5s ease, color 0.3s ease, border-color 0.3s ease;
+}
