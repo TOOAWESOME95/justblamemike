@@ -3,6 +3,7 @@ import Content from './content';
 export const metadata = {
   title: 'SEO Agency Manchester | Local SEO & Technical SEO | Just Blame Mike',
   description: 'Manchester SEO agency specialising in local SEO, technical SEO, and organic growth. Get found on Google by customers in Manchester and beyond. Free SEO audit.',
+  alternates: { canonical: '/services/seo-manchester/' },
   keywords: 'SEO agency Manchester, local SEO Manchester, best SEO agency Manchester UK, technical SEO Manchester, web design and SEO Manchester',
   openGraph: { title: 'SEO Agency Manchester | Just Blame Mike', description: 'Manchester SEO that gets you found. Local & technical SEO specialists. Free audit.', url: 'https://justblamemike.com/services/seo-manchester/' },
 };

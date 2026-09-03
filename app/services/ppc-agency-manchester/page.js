@@ -4,6 +4,7 @@ import Content from './content';
 export const metadata = {
   title: 'PPC Agency Manchester | Pay-Per-Click Management | Just Blame Mike',
   description: 'Manchester PPC agency delivering Google Ads and Meta Ads campaigns that actually convert. No wasted spend, no vanity metrics. Free PPC audit available.',
+  alternates: { canonical: '/services/ppc-agency-manchester/' },
   keywords: 'PPC agency Manchester, PPC management Manchester, pay per click Manchester, PPC agency North West England, PPC management small businesses Manchester',
   openGraph: {
     title: 'PPC Agency Manchester | Just Blame Mike',

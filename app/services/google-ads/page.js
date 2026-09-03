@@ -1,9 +1,11 @@
-import Schema, { serviceSchema, breadcrumbSchema } from '../../components/Schema';
+import Schema, { serviceSchema, breadcrumbSchema, faqSchema } from '../../components/Schema';
 import GoogleAdsContent from './content';
+import { FAQS } from './faqs';
 
 export const metadata = {
   title: 'Google Ads Management | Just Blame Mike',
   description: 'Expert Google Ads management. Search, Shopping, Display, and Performance Max campaigns optimised for maximum ROI. Free audit available.',
+  alternates: { canonical: '/services/google-ads/' },
   keywords: 'Google Ads management, PPC agency, Google Shopping ads, Performance Max, Manchester',
   openGraph: {
     title: 'Google Ads Management | Just Blame Mike',
@@ -25,6 +27,7 @@ export default function GoogleAdsPage() {
         { name: 'Services', url: 'https://justblamemike.com/services' },
         { name: 'Google Ads', url: 'https://justblamemike.com/services/google-ads' },
       ])} />
+      <Schema data={faqSchema(FAQS)} />
       <GoogleAdsContent />
     </>
   );

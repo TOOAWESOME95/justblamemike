@@ -12,13 +12,16 @@ import CookieConsent from './components/CookieConsent';
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
 export const metadata = {
-  title: 'Just Blame Mike | Digital Marketing Agency',
+  title: 'PPC, Websites & SEO That Pay For Themselves | Just Blame Mike',
   description: 'PPC management, bespoke websites, and SEO strategies that actually move the needle. We handle the complexity. You take the credit.',
   keywords: 'digital marketing, PPC, Google Ads, Meta Ads, SEO, web design, Manchester',
   metadataBase: new URL('https://justblamemike.com'),
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
-    title: 'Just Blame Mike | Digital Marketing Agency',
-    description: 'We build your growth engine. Blame Mike.',
+    title: 'PPC, Websites & SEO That Pay For Themselves | Just Blame Mike',
+    description: 'PPC management, bespoke websites, and SEO strategies that actually move the needle.',
     url: 'https://justblamemike.com',
     siteName: 'Just Blame Mike',
     images: [
@@ -34,8 +37,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Just Blame Mike | Digital Marketing Agency',
-    description: 'We build your growth engine. Blame Mike.',
+    title: 'PPC, Websites & SEO That Pay For Themselves | Just Blame Mike',
+    description: 'PPC management, bespoke websites, and SEO strategies that actually move the needle.',
     images: ['/og-image.png'],
   },
 };

@@ -4,6 +4,7 @@ import Link from 'next/link';
 import FadeIn from '../../components/FadeIn';
 import { SectionLabel, PlaceholderImg } from '../../components/UI';
 import AuditForm from '../../components/AuditForm';
+import { FAQS } from './faqs';
 
 export default function EmailMarketingContent() {
   return (
@@ -138,6 +139,26 @@ export default function EmailMarketingContent() {
                 </div>
               </div>
             </FadeIn>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQs */}
+      <section className="bg-brand-dark">
+        <div className="max-w-3xl mx-auto px-6 py-20">
+          <FadeIn>
+            <SectionLabel>FAQs</SectionLabel>
+            <h2 className="text-3xl font-bold text-white mb-8">Common questions.</h2>
+          </FadeIn>
+          <div className="space-y-6">
+            {FAQS.map((f) => (
+              <FadeIn key={f.question}>
+                <div className="p-6 rounded-2xl bg-brand-orange/[0.03] border border-brand-orange/[0.08]">
+                  <h3 className="text-white font-bold mb-2">{f.question}</h3>
+                  <p className="text-sm leading-relaxed text-[#8a7a6a]">{f.answer}</p>
+                </div>
+              </FadeIn>
+            ))}
           </div>
         </div>
       </section>

@@ -1,9 +1,11 @@
-import Schema, { serviceSchema, breadcrumbSchema } from '../../components/Schema';
+import Schema, { serviceSchema, breadcrumbSchema, faqSchema } from '../../components/Schema';
 import EmailMarketingContent from './content';
+import { FAQS } from './faqs';
 
 export const metadata = {
   title: 'Email Marketing Strategy & Deliverability | Just Blame Mike',
   description: 'Email marketing that actually lands in inboxes. Strategy, segmentation, automation, and deliverability. so your emails get opened, not blocked. Free audit.',
+  alternates: { canonical: '/services/email-marketing/' },
   keywords: 'email marketing, email deliverability, email segmentation, email automation, avoid spam filters, Manchester',
   openGraph: {
     title: 'Email Marketing Strategy | Just Blame Mike',
@@ -25,6 +27,7 @@ export default function EmailMarketingPage() {
         { name: 'Services', url: 'https://justblamemike.com/services' },
         { name: 'Email Marketing', url: 'https://justblamemike.com/services/email-marketing' },
       ])} />
+      <Schema data={faqSchema(FAQS)} />
       <EmailMarketingContent />
     </>
   );

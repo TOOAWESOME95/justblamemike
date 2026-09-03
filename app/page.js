@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import FadeIn from './components/FadeIn';
 import { SectionLabel, OrangeBtn, PlaceholderImg, CTA } from './components/UI';
+import Schema, { howToSchema } from './components/Schema';
 
 const FEATURED_WORK = [
   { tag: 'Social Media · Viral Marketing', client: 'YorkRoast', headline: 'From a wrap to 2.7 million views across Facebook and LadBible.', image: '/york-roast.jpg', metrics: [['2.7M+', 'Views'], ['Viral', 'LadBible'], ['📈', 'Awareness']] },
@@ -29,6 +30,16 @@ export default function HomePage() {
 
   return (
     <>
+      <Schema data={howToSchema({
+        name: 'How Just Blame Mike Works With New Clients',
+        description: 'The four-step process for starting a PPC, website, or SEO project with Just Blame Mike.',
+        steps: [
+          { name: 'Discovery Call', text: 'We chat about your business, goals, and what’s not working. No hard sell.' },
+          { name: 'Strategy & Audit', text: 'We dive into your data, competitors, and market. You get a clear plan.' },
+          { name: 'Build & Launch', text: 'We build it, test it, and launch it. Campaigns, websites, or both.' },
+          { name: 'Optimise & Scale', text: 'Monthly reporting, continuous optimisation, and scaling what works.' },
+        ],
+      })} />
       {/* Hero */}
       <section className="relative min-h-screen flex items-center overflow-hidden bg-brand-dark">
         <div className="absolute inset-0 opacity-30" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(244,140,37,0.03) 1px, transparent 0)', backgroundSize: '32px 32px' }} />
@@ -38,19 +49,20 @@ export default function HomePage() {
             <FadeIn><SectionLabel>Digital Marketing Agency</SectionLabel></FadeIn>
             <FadeIn delay={0.1}>
               <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white leading-[0.95] tracking-tighter mb-8">
-                We build your<br />growth engine.<br /><span className="text-brand-orange">Blame Mike.</span>
+                PPC. Websites. SEO.<br /><span className="text-brand-orange">Blame Mike*</span>
               </h1>
             </FadeIn>
             <FadeIn delay={0.2}>
-              <p className="text-lg md:text-xl leading-relaxed max-w-xl mb-10 text-[#a89882]">
-                PPC management, bespoke websites, and SEO strategies that actually move the needle. We handle the complexity. you take the credit.
+              <p className="text-lg md:text-xl leading-relaxed max-w-xl mb-4 text-[#a89882]">
+                We run your Google &amp; Meta ad campaigns, build the website they land on, and get you found on search &mdash; so growth doesn&apos;t depend on you learning marketing.
               </p>
             </FadeIn>
             <FadeIn delay={0.3}>
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap gap-4 mb-4">
                 <OrangeBtn href="/contact">Start Your Project</OrangeBtn>
                 <OrangeBtn variant="outline" href="/services">View Services</OrangeBtn>
               </div>
+              <p className="text-xs text-[#6a5a4a]">*Results guaranteed. Blame is optional.</p>
             </FadeIn>
           </div>
         </div>
@@ -114,7 +126,7 @@ export default function HomePage() {
             <SectionLabel>Recent Work</SectionLabel>
             <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-16 gap-4">
               <h2 className="text-4xl md:text-5xl font-black text-white tracking-tight max-w-lg leading-tight">
-                Results that speak <span className="text-brand-orange">louder than Mike.</span>
+                Results that <span className="text-brand-orange">do the talking.</span>
               </h2>
               <Link href="/case-studies" className="text-sm font-bold flex items-center gap-2 group text-brand-orange">
                 View all case studies <span className="inline-block transition-transform group-hover:translate-x-1">→</span>
@@ -160,7 +172,7 @@ export default function HomePage() {
           <div className="grid md:grid-cols-4 gap-6">
             {[
               { s: '01', t: 'Discovery Call', d: "We chat about your business, goals, and what's not working. No hard sell." },
-              { s: '02', t: 'Strategy & Audit', d: 'Mike dives into your data, competitors, and market. You get a clear plan.' },
+              { s: '02', t: 'Strategy & Audit', d: 'We dive into your data, competitors, and market. You get a clear plan.' },
               { s: '03', t: 'Build & Launch', d: 'We build it, test it, and launch it. Campaigns, websites, or both.' },
               { s: '04', t: 'Optimise & Scale', d: 'Monthly reporting, continuous optimisation, and scaling what works.' },
             ].map((item, i) => (

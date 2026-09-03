@@ -2,10 +2,12 @@
 
 import FadeIn from '../components/FadeIn';
 import { SectionLabel, PlaceholderImg } from '../components/UI';
+import Schema, { localBusinessSchema } from '../components/Schema';
 
 export default function ContactPage() {
   return (
     <>
+      <Schema data={localBusinessSchema()} />
       {/* Hero */}
       <section className="relative overflow-hidden pt-12 pb-8 bg-brand-dark">
         <div className="absolute bottom-[-20%] left-[-10%] w-[600px] h-[600px] rounded-full" style={{ background: 'radial-gradient(circle, rgba(244,140,37,0.06) 0%, transparent 70%)' }} />

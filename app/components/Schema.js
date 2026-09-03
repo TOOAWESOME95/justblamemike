@@ -80,6 +80,38 @@ export function breadcrumbSchema(items) {
   };
 }
 
+// Helper for FAQPage
+export function faqSchema(items) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: items.map((item) => ({
+      '@type': 'Question',
+      name: item.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.answer,
+      },
+    })),
+  };
+}
+
+// Helper for HowTo
+export function howToSchema({ name, description, steps }) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name,
+    description,
+    step: steps.map((step, i) => ({
+      '@type': 'HowToStep',
+      position: i + 1,
+      name: step.name,
+      text: step.text,
+    })),
+  };
+}
+
 // Helper for LocalBusiness (contact page)
 export function localBusinessSchema() {
   return {
