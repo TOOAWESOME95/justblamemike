@@ -54,7 +54,7 @@ export default function HomePage() {
             </FadeIn>
             <FadeIn delay={0.2}>
               <p className="text-lg md:text-xl leading-relaxed max-w-xl mb-4 text-[#a89882]">
-                We run your Google &amp; Meta ad campaigns, build the website they land on, and get you found on search &mdash; so growth doesn&apos;t depend on you learning marketing.
+                We run your Google &amp; Meta ad campaigns, build the website they land on, and get you found on search, so growth doesn&apos;t depend on you learning marketing.
               </p>
             </FadeIn>
             <FadeIn delay={0.3}>

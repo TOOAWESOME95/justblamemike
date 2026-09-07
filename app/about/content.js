@@ -191,7 +191,7 @@ export default function AboutContent() {
                 <div className="absolute bottom-0 left-0 right-0 p-8">
                   <div className="p-6 rounded-xl bg-brand-dark/80 backdrop-blur-md" style={{ borderLeft: '4px solid #f48c25' }}>
                     <p className="italic text-white text-lg leading-relaxed">&ldquo;The market doesn&apos;t care about your feelings. It only cares about who&apos;s shouting the loudest with the best product.&rdquo;</p>
-                    <p className="font-black text-brand-orange mt-3 uppercase tracking-widest text-sm">— Mike</p>
+                    <p className="font-black text-brand-orange mt-3 uppercase tracking-widest text-sm">Mike</p>
                   </div>
                 </div>
               </div>
