@@ -68,14 +68,14 @@ const CASE_STUDIES = [
     tag: 'Web Design · Custom PHP · Lead Generation',
     headline: 'From 15 leads to 60. Custom code, custom results.',
     image: '/copiers.png',
-    challenge: "Three copier companies under one group needed their websites completely rebuilt. Off-the-shelf solutions couldn't deliver the features they needed. Bespoke quote builders, product configurators, and intelligent lead routing that simply don't exist in templates. Their current sites were generating barely 10-15 leads a month.",
+    challenge: "Three copier companies under one group needed their websites completely rebuilt. Off-the-shelf solutions couldn't deliver the features they needed. Bespoke quote builders, product configurators, and intelligent lead routing that simply don't exist in templates. Their current sites were generating barely 15 leads a month.",
     actions: [
       'Fully rebuilt all three websites from scratch using custom PHP . No WordPress, no templates',
       'Developed bespoke features not available in any off-the-shelf solution including instant quote calculators',
       'Designed for conversion with clear CTAs, streamlined user journeys, and integrated lead tracking',
       'Implemented source attribution so they know exactly where every lead comes from',
     ],
-    metrics: [['10→60', 'Leads Per Month'], ['3', 'Sites Rebuilt'], ['Custom', 'PHP Build']],
+    metrics: [['15→60', 'Leads Per Month'], ['3', 'Sites Rebuilt'], ['Custom', 'PHP Build']],
   },
   {
     client: 'Cancer Got Talent',
@@ -178,7 +178,7 @@ export default function CaseStudiesPage() {
         <div className="max-w-7xl mx-auto px-6 py-10">
           <FadeIn>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              {[['2.7M+', 'Viral Video Views'], ['450%+', 'ROAS (Nutripouch)'], ['10→60', 'Leads/Month (Copiers)'], ['£7K+', 'Raised for Charity']].map(([n, l]) => (
+              {[['2.7M+', 'Viral Video Views'], ['450%+', 'ROAS (Nutripouch)'], ['15→60', 'Leads/Month (Copiers)'], ['£7K+', 'Raised for Charity']].map(([n, l]) => (
                 <div key={l} className="rounded-2xl p-6 text-center bg-brand-orange/[0.03] border border-brand-orange/[0.08]">
                   <p className="text-3xl font-black text-brand-orange">{n}</p>
                   <p className="text-xs font-semibold uppercase tracking-wider mt-1 text-[#6a5a4a]">{l}</p>

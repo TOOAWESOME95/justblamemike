@@ -82,7 +82,7 @@ export default function WebDesignContent() {
           </FadeIn>
           <div className="grid md:grid-cols-2 gap-8">
             {[
-              { client: 'Red Rose / White Rose / North Wales Copiers', desc: 'Three custom PHP websites with bespoke quote builders and lead routing. Leads jumped from 10-15 to 50-60 per month.', image: '/copiers.png', stat: '10→60 leads/mo' },
+              { client: 'Red Rose / White Rose / North Wales Copiers', desc: 'Three custom PHP websites with bespoke quote builders and lead routing. Leads jumped from 15 to 60 per month.', image: '/copiers.png', stat: '15→60 leads/mo' },
               { client: 'Barton Drilling', desc: "Mike's very first website, built at 16. A full business site for a specialist drilling company.", image: '/barton-drilling.png', stat: 'First ever build' },
               { client: 'Cancer Got Talent', desc: 'Charity website and videography. Helped raise over £7,000 for cancer patients.', image: '/cancer-got-talent.jpg', stat: '£7K+ raised' },
               { client: 'MLS Kitchens', desc: 'Kitchen specialist website paired with LinkedIn automation generating 40+ leads per month.', image: '/mls-kitchen.png', stat: '40+ leads/mo' },
