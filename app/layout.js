@@ -8,6 +8,7 @@ import Schema, { orgSchema } from './components/Schema';
 import GoogleAnalytics from './components/GoogleAnalytics';
 import GoogleTagManager, { GTMNoScript } from './components/GoogleTagManager';
 import CookieConsent from './components/CookieConsent';
+import { FloatingWhatsApp } from './components/WhatsApp';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
@@ -58,6 +59,7 @@ export default function RootLayout({ children }) {
           </div>
           <main className="pt-[88px]">{children}</main>
           <Footer />
+          <FloatingWhatsApp />
           <CookieConsent />
         </ThemeProvider>
       </body>

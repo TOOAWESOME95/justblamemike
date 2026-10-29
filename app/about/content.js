@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import FadeIn from '../components/FadeIn';
 import { SectionLabel, PlaceholderImg, CTA } from '../components/UI';
+import { WHATSAPP_URL, WhatsAppIcon } from '../components/WhatsApp';
 
 function TimelineItem({ year, title, description, side = 'left', icon }) {
   return (
@@ -84,12 +85,33 @@ export default function AboutContent() {
         </div>
       </section>
 
-      {/* Hero Image */}
+      {/* Mike */}
       <section className="bg-brand-dark">
         <div className="max-w-7xl mx-auto px-6 pb-12">
           <FadeIn>
-            <div className="rounded-2xl overflow-hidden" style={{ aspectRatio: '21/9', border: '1px solid rgba(244,140,37,0.12)' }}>
-              <img src="/banner-team.png" alt="The Just Blame Mike team" className="w-full h-full object-cover" />
+            <div className="grid md:grid-cols-[minmax(0,2fr)_minmax(0,3fr)] gap-10 md:gap-16 items-center">
+              <div className="rounded-2xl overflow-hidden max-w-md w-full" style={{ aspectRatio: '4/5', border: '1px solid rgba(244,140,37,0.12)' }}>
+                <img src="/michael.png" alt="Michael, founder of Just Blame Mike" className="w-full h-full object-cover" style={{ objectPosition: 'center 22%' }} />
+              </div>
+              <div>
+                <p className="text-3xl md:text-4xl font-black text-white leading-tight mb-6">
+                  Hi, I&apos;m Mike. <span className="text-brand-orange">Yes, that Mike.</span>
+                </p>
+                <p className="text-[#a89882] text-lg leading-relaxed mb-4">
+                  I built my first website at 16 for Barton Drilling, and I&apos;ve been fixing businesses&apos; marketing ever since. Ads, websites, SEO, the lot.
+                </p>
+                <p className="text-[#a89882] text-lg leading-relaxed mb-8">
+                  There are no account managers here. When you work with Just Blame Mike, you deal with me, and if something isn&apos;t working, you know exactly who to blame.
+                </p>
+                <div className="flex flex-wrap gap-4">
+                  <Link href="/contact#book" className="px-8 py-4 rounded-xl font-bold text-base bg-brand-orange text-brand-dark transition-transform hover:scale-105">
+                    Book a call with me
+                  </Link>
+                  <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="px-6 py-4 rounded-xl font-bold text-base text-white flex items-center gap-2 transition-transform hover:scale-105" style={{ background: '#1fa855' }}>
+                    <WhatsAppIcon size={20} /> Message on WhatsApp
+                  </a>
+                </div>
+              </div>
             </div>
           </FadeIn>
         </div>

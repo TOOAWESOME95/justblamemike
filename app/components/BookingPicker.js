@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react';
 import FadeIn from './FadeIn';
 import { SectionLabel } from './UI';
+import { WHATSAPP_URL } from './WhatsApp';
 
 // Weekly call slots Mike offers (0 = Sunday … 6 = Saturday). Edit these to change availability.
 const WEEKLY_SLOTS = {
@@ -69,8 +70,13 @@ export default function BookingPicker() {
           <h2 className="text-4xl md:text-5xl font-black text-white tracking-tight mb-4 max-w-2xl leading-tight">
             Rather talk it through?
           </h2>
-          <p className="text-lg text-[#a89882] max-w-xl mb-12">
+          <p className="text-lg text-[#a89882] max-w-xl mb-4">
             Pick a time for a free 15-minute call. I only take a few of these each week, so I can give every one proper attention.
+          </p>
+          <p className="text-sm text-[#a89882] mb-12">
+            None of these times work?{' '}
+            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="font-bold text-[#3fd27f] underline underline-offset-4">Message me on WhatsApp</a>
+            {' '}and we&apos;ll sort one out.
           </p>
         </FadeIn>
 

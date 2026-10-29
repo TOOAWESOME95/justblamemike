@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import FadeIn from './FadeIn';
+import { WHATSAPP_URL, WhatsAppIcon } from './WhatsApp';
 
 export function SectionLabel({ children }) {
   return (
@@ -60,9 +61,12 @@ export function CTA() {
                 <Link href="/contact" className="px-10 py-4 rounded-xl font-bold text-base transition-all hover:scale-105 active:scale-95 bg-brand-dark text-brand-orange">
                   Start Your Project
                 </Link>
-                <Link href="/contact" className="px-10 py-4 rounded-xl font-bold text-base transition-all hover:scale-105 active:scale-95 border-2 border-brand-dark text-brand-dark">
-                  Book a Free Audit
+                <Link href="/contact#book" className="px-10 py-4 rounded-xl font-bold text-base transition-all hover:scale-105 active:scale-95 border-2 border-brand-dark text-brand-dark">
+                  Book a Call
                 </Link>
+                <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="px-8 py-4 rounded-xl font-bold text-base transition-all hover:scale-105 active:scale-95 border-2 border-brand-dark text-brand-dark flex items-center justify-center gap-2">
+                  <WhatsAppIcon size={20} /> WhatsApp
+                </a>
               </div>
             </div>
           </div>

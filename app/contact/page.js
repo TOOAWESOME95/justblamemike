@@ -4,6 +4,7 @@ import FadeIn from '../components/FadeIn';
 import { SectionLabel, PlaceholderImg } from '../components/UI';
 import Schema, { localBusinessSchema } from '../components/Schema';
 import BookingPicker from '../components/BookingPicker';
+import { WHATSAPP_URL, WhatsAppIcon } from '../components/WhatsApp';
 
 export default function ContactPage() {
   return (
@@ -46,6 +47,15 @@ export default function ContactPage() {
                     </div>
                   ))}
                 </div>
+                <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer"
+                  className="mt-6 flex items-center gap-4 p-6 rounded-2xl border transition-colors hover:border-[#1fa855] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#1fa855]"
+                  style={{ background: 'rgba(31,168,85,0.08)', borderColor: 'rgba(31,168,85,0.3)' }}>
+                  <span className="flex items-center justify-center w-12 h-12 rounded-full text-white shrink-0" style={{ background: '#1fa855' }}><WhatsAppIcon size={26} /></span>
+                  <span>
+                    <span className="block text-white font-bold">Message me on WhatsApp</span>
+                    <span className="block text-sm text-[#8a7a6a]">Quickest way to reach me. 07570 978359</span>
+                  </span>
+                </a>
               </FadeIn>
 
               <FadeIn delay={0.05}>
@@ -57,9 +67,13 @@ export default function ContactPage() {
               </FadeIn>
 
               <FadeIn delay={0.1}>
-                <div className="rounded-2xl overflow-hidden" style={{ aspectRatio: '16/9', border: '1px solid rgba(244,140,37,0.12)' }}>
-                  <img src="/banner-team.png" alt="The Just Blame Mike team" className="w-full h-full object-cover" />
-                </div>
+                <figure className="rounded-2xl overflow-hidden bg-brand-orange/[0.03] border border-brand-orange/[0.08] grid grid-cols-[120px_1fr] sm:grid-cols-[160px_1fr] items-center">
+                  <img src="/michael.png" alt="Michael, founder of Just Blame Mike" className="w-full h-full object-cover" style={{ aspectRatio: '4/5', objectPosition: 'center 22%' }} />
+                  <figcaption className="p-5 sm:p-6">
+                    <p className="text-white font-bold mb-1">You&apos;ll be talking to me.</p>
+                    <p className="text-sm text-[#8a7a6a]">No account managers, no call centre. Just Mike.</p>
+                  </figcaption>
+                </figure>
               </FadeIn>
 
               <FadeIn delay={0.15}>
