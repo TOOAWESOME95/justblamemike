@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import FadeIn from './components/FadeIn';
 import { SectionLabel, OrangeBtn, PlaceholderImg, CTA } from './components/UI';
+import VideoShowcase from './components/VideoShowcase';
 import Schema, { howToSchema } from './components/Schema';
 
 const FEATURED_WORK = [
@@ -159,6 +160,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Videos */}
+      <VideoShowcase />
 
       {/* Process */}
       <section className="bg-brand-dark">

@@ -3,6 +3,7 @@
 import FadeIn from '../components/FadeIn';
 import { SectionLabel, PlaceholderImg } from '../components/UI';
 import Schema, { localBusinessSchema } from '../components/Schema';
+import BookingPicker from '../components/BookingPicker';
 
 export default function ContactPage() {
   return (
@@ -149,6 +150,9 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+
+      {/* Book a call */}
+      <BookingPicker />
     </>
   );
 }
