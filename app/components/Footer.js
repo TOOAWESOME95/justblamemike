@@ -23,6 +23,7 @@ export default function Footer() {
               <li><Link href="/services/web-design" className="hover:text-white transition-colors">Custom Web Design</Link></li>
               <li><Link href="/services/seo" className="hover:text-white transition-colors">SEO Strategy</Link></li>
               <li><Link href="/services/email-marketing" className="hover:text-white transition-colors">Email Marketing</Link></li>
+              <li><Link href="/services/cloud-drive" className="hover:text-white transition-colors">Cloud Drive & IT Support</Link></li>
             </ul>
           </div>
           <div>

@@ -189,6 +189,38 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      {/* Cloud Drive & IT Support */}
+      <section className="bg-brand-dark">
+        <div className="max-w-7xl mx-auto px-6 py-20">
+          <FadeIn>
+            <div className="flex items-center gap-4 mb-12 border-l-4 border-brand-orange pl-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight">Cloud Drive & IT Support</h2>
+              <span className="px-3 py-1 rounded-full text-xs font-black uppercase tracking-wider bg-brand-orange text-brand-dark">New</span>
+            </div>
+          </FadeIn>
+          <FadeIn>
+            <div className="p-8 md:p-10 rounded-2xl bg-brand-orange/[0.03] border border-brand-orange/[0.08] grid md:grid-cols-2 gap-8 items-center">
+              <div>
+                <h3 className="text-white text-2xl font-bold mb-4">Your files on every device. One person to call.</h3>
+                <p className="text-sm leading-relaxed text-[#8a7a6a]">A secure Cloud Drive that works like a normal hard drive, synced to your PC, laptop and phone. Set up, looked after and supported by me, with help for everyday IT problems too. From £8 per person a month, with 50 GB of storage each.</p>
+              </div>
+              <ul className="space-y-3">
+                {['Shows up on your PC like any other drive', 'Synced to every device you use', 'Open your files from anywhere', 'A real person to call, not a chatbot'].map((f) => (
+                  <li key={f} className="flex items-center gap-3 text-sm text-[#b0a090]"><span className="text-brand-orange">✓</span> {f}</li>
+                ))}
+              </ul>
+            </div>
+          </FadeIn>
+          <FadeIn delay={0.1}>
+            <div className="mt-10">
+              <Link href="/services/cloud-drive" className="text-sm font-bold text-brand-orange inline-flex items-center gap-2 group">
+                See how it works and pricing <span className="inline-block transition-transform group-hover:translate-x-1">→</span>
+              </Link>
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
       {/* Location & Specialist Pages */}
       <section className="bg-brand-dark" style={{ borderTop: '1px solid rgba(244,140,37,0.08)' }}>
         <div className="max-w-7xl mx-auto px-6 py-20">
