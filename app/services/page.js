@@ -221,6 +221,38 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      {/* Business Email Hosting */}
+      <section className="bg-brand-dark">
+        <div className="max-w-7xl mx-auto px-6 py-20">
+          <FadeIn>
+            <div className="flex items-center gap-4 mb-12 border-l-4 border-brand-orange pl-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight">Business Email Hosting</h2>
+              <span className="px-3 py-1 rounded-full text-xs font-black uppercase tracking-wider bg-brand-orange text-brand-dark">New</span>
+            </div>
+          </FadeIn>
+          <FadeIn>
+            <div className="p-8 md:p-10 rounded-2xl bg-brand-orange/[0.03] border border-brand-orange/[0.08] grid md:grid-cols-2 gap-8 items-center">
+              <div>
+                <h3 className="text-white text-2xl font-bold mb-4">Your business email. Hosted by me.</h3>
+                <p className="text-sm leading-relaxed text-[#8a7a6a]">Move your email off the big tech companies and onto my server. One flat monthly price instead of paying for every user, with security set up properly and a real person to call. Get a free quote in a couple of minutes.</p>
+              </div>
+              <ul className="space-y-3">
+                {['Keep your existing email addresses', 'No per-user fees', 'Spam filtering and daily backups', 'Old emails moved over for you'].map((f) => (
+                  <li key={f} className="flex items-center gap-3 text-sm text-[#b0a090]"><span className="text-brand-orange">✓</span> {f}</li>
+                ))}
+              </ul>
+            </div>
+          </FadeIn>
+          <FadeIn delay={0.1}>
+            <div className="mt-10">
+              <Link href="/services/email-hosting" className="text-sm font-bold text-brand-orange inline-flex items-center gap-2 group">
+                See how it works and get a quote <span className="inline-block transition-transform group-hover:translate-x-1">→</span>
+              </Link>
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
       {/* Location & Specialist Pages */}
       <section className="bg-brand-dark" style={{ borderTop: '1px solid rgba(244,140,37,0.08)' }}>
         <div className="max-w-7xl mx-auto px-6 py-20">

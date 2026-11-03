@@ -12,6 +12,7 @@ const SERVICES = [
   { label: 'SEO Strategy', href: '/services/seo' },
   { label: 'Email Marketing', href: '/services/email-marketing' },
   { label: 'Cloud Drive & IT Support', href: '/services/cloud-drive' },
+  { label: 'Business Email Hosting', href: '/services/email-hosting' },
   { label: 'Social Media Marketing', href: '/services/social-media-marketing-manchester' },
   { label: 'Digital Marketing Manchester', href: '/services/digital-marketing-manchester' },
   { label: 'Small Business Marketing', href: '/services/digital-marketing-small-business' },

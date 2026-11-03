@@ -296,6 +296,21 @@ export default function CloudDriveContent() {
         </div>
       </section>
 
+      {/* Cross-link */}
+      <section className="bg-brand-dark">
+        <div className="max-w-7xl mx-auto px-6 pb-16">
+          <FadeIn>
+            <Link href="/services/email-hosting" className="group flex flex-col md:flex-row md:items-center justify-between gap-4 p-6 md:p-8 rounded-2xl bg-brand-orange/[0.03] border border-brand-orange/[0.08] hover:border-brand-orange/40 transition-colors">
+              <span>
+                <span className="block text-white font-bold mb-1">Need business email too?</span>
+                <span className="block text-sm text-[#8a7a6a]">Your email hosted on my server, with one flat monthly price and no per-user fees.</span>
+              </span>
+              <span className="text-sm font-bold text-brand-orange inline-flex items-center gap-2 shrink-0">See email hosting <span className="inline-block transition-transform group-hover:translate-x-1">→</span></span>
+            </Link>
+          </FadeIn>
+        </div>
+      </section>
+
       <CTA />
     </>
   );
