@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import FadeIn from '../components/FadeIn';
 import { SectionLabel, PlaceholderImg, CTA } from '../components/UI';
+import ClientLinks from '../components/ClientLinks';
 
 const CASE_STUDIES = [
   {
@@ -248,6 +249,8 @@ export default function CaseStudiesPage() {
                           </li>
                         ))}
                       </ul>
+
+                      <ClientLinks client={cs.client} className="mb-4" />
 
                       {cs.videoLink && (
                         <a

@@ -4,6 +4,7 @@ import Link from 'next/link';
 import FadeIn from '../../components/FadeIn';
 import { SectionLabel, PlaceholderImg } from '../../components/UI';
 import AuditForm from '../../components/AuditForm';
+import ClientLinks from '../../components/ClientLinks';
 import { FAQS } from './faqs';
 
 export default function WebDesignContent() {
@@ -88,18 +89,21 @@ export default function WebDesignContent() {
               { client: 'MLS Kitchens', desc: 'Kitchen specialist website paired with LinkedIn automation generating 40+ leads per month.', image: '/mls-kitchen.png', stat: '40+ leads/mo' },
             ].map((site, i) => (
               <FadeIn key={site.client} delay={i * 0.08}>
-                <Link href="/case-studies" className="block rounded-2xl overflow-hidden transition-all duration-300 hover:translate-y-[-4px] bg-brand-orange/[0.03] border border-brand-orange/[0.08]">
-                  <div className="overflow-hidden" style={{ aspectRatio: '16/9' }}>
-                    <img src={site.image} alt={site.client} className="w-full h-full object-cover object-top" />
-                  </div>
-                  <div className="p-6">
-                    <div className="flex items-center justify-between mb-2">
-                      <h4 className="text-white font-bold">{site.client}</h4>
-                      <span className="text-xs font-bold text-brand-orange">{site.stat}</span>
+                <div className="h-full rounded-2xl overflow-hidden transition-all duration-300 hover:translate-y-[-4px] bg-brand-orange/[0.03] border border-brand-orange/[0.08]">
+                  <Link href="/case-studies" className="block">
+                    <div className="overflow-hidden" style={{ aspectRatio: '16/9' }}>
+                      <img src={site.image} alt={site.client} className="w-full h-full object-cover object-top" />
                     </div>
-                    <p className="text-sm text-[#8a7a6a]">{site.desc}</p>
-                  </div>
-                </Link>
+                    <div className="p-6">
+                      <div className="flex items-center justify-between mb-2">
+                        <h4 className="text-white font-bold">{site.client}</h4>
+                        <span className="text-xs font-bold text-brand-orange">{site.stat}</span>
+                      </div>
+                      <p className="text-sm text-[#8a7a6a]">{site.desc}</p>
+                    </div>
+                  </Link>
+                  <ClientLinks client={site.client} className="px-6 pb-6 -mt-2" />
+                </div>
               </FadeIn>
             ))}
           </div>

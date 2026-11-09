@@ -6,6 +6,7 @@ import Image from 'next/image';
 import FadeIn from './components/FadeIn';
 import { SectionLabel, OrangeBtn, PlaceholderImg, CTA } from './components/UI';
 import VideoShowcase from './components/VideoShowcase';
+import ClientLinks from './components/ClientLinks';
 import Schema, { howToSchema } from './components/Schema';
 
 const FEATURED_WORK = [
@@ -137,7 +138,8 @@ export default function HomePage() {
           <div className="grid md:grid-cols-2 gap-6">
             {featured.map((cs, n) => (
               <FadeIn key={cs.client} delay={n * 0.1}>
-                <Link href="/case-studies" className="block rounded-2xl overflow-hidden transition-all duration-300 hover:translate-y-[-4px] bg-brand-dark border border-brand-orange/[0.08]">
+                <div className="h-full rounded-2xl overflow-hidden transition-all duration-300 hover:translate-y-[-4px] bg-brand-dark border border-brand-orange/[0.08]">
+                <Link href="/case-studies" className="block">
                   <div className="overflow-hidden" style={{ aspectRatio: '16/9' }}>
                     <img src={cs.image} alt={cs.client} className="w-full h-full object-cover" />
                   </div>
@@ -155,6 +157,8 @@ export default function HomePage() {
                     </div>
                   </div>
                 </Link>
+                <ClientLinks client={cs.client} className="px-8 pb-8 -mt-2" />
+                </div>
               </FadeIn>
             ))}
           </div>
